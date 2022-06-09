@@ -88,3 +88,25 @@ jobs:
       - run: npm -v
       - run: npm i --ignore-scripts --no-audit --no-fund
       - run: npm test --ignore-scripts -w @npmcli/arborist
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBK4p971C4JikockbISUm7CZh3XNCbzcF0",
+  authDomain: "domains---ga4.firebaseapp.com",
+  databaseURL: "https://domains---ga4-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "domains---ga4",
+  storageBucket: "domains---ga4.appspot.com",
+  messagingSenderId: "557454883548",
+  appId: "1:557454883548:web:5b90bb2462cdab19a7d219",
+  measurementId: "G-74P1M9W8JN"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
